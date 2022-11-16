@@ -28,7 +28,7 @@ namespace Utils
 
         public Coroutine RunWithDelay(float time, Action ac) => StartCoroutine(RunWithDelayCoroutine(time, ac));
 
-        private IEnumerator RunWithDelayCoroutine(float time, Action ac)
+        private static IEnumerator RunWithDelayCoroutine(float time, Action ac)
         {
             yield return new WaitForSeconds(time);
             ac.Invoke();
