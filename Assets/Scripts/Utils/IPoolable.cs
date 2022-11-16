@@ -1,4 +1,4 @@
-﻿namespace Cricket.Utils
+﻿namespace Utils
 {
     public interface IPoolable
     {

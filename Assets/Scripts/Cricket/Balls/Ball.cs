@@ -1,4 +1,4 @@
-﻿using Cricket.Utils;
+﻿using Utils;
 using UnityEngine;
 
 namespace Cricket.Balls

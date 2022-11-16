@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Cricket.Utils
+namespace Utils
 {
     /// <summary>
     ///     creates a pool for any object that implements IPoolable
