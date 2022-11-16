@@ -1,5 +1,4 @@
-﻿using System;
-using Cricket.Utils;
+﻿using Cricket.Utils;
 using UnityEngine;
 
 namespace Cricket.Balls
@@ -47,8 +46,8 @@ namespace Cricket.Balls
             _crossedBoundary = false;
 
             HitByBat = false;
-
             _rb.velocity = Vector3.zero;
+
             gameObject.SetActive(false);
         }
 
