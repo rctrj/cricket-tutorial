@@ -428,11 +428,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 958788583}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 052d0d85712a4302b27defa0b654c195, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a36bfb6aad49944f9a44414031eff51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadDelay: 2
-  sceneName: Test
+  loadDelay: 3
+  sceneName: BatsmanScene
+  runOnAwake: 1
 --- !u!4 &958788585
 Transform:
   m_ObjectHideFlags: 0

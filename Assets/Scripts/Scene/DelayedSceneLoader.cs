@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utils;
 
@@ -9,6 +9,14 @@ namespace Scene
         [SerializeField] private float loadDelay;
         [SerializeField] private string sceneName;
 
-        private void Awake() => DelayedRunner.Instance.RunWithDelay(loadDelay, () => SceneManager.LoadScene(sceneName));
+        [SerializeField] private bool runOnAwake;
+
+        private void Awake()
+        {
+            if (runOnAwake) LoadNextScene();
+        }
+
+        public void LoadNextScene() =>
+            DelayedRunner.Instance.RunWithDelay(loadDelay, () => SceneManager.LoadScene(sceneName));
     }
 }

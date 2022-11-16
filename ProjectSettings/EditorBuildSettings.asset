@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LoadingScene.unity
     guid: 57496cd874f2c7f4f924fb75030b9189
   - enabled: 1
+    path: Assets/Scenes/BatsmanScene.unity
+    guid: e697e815fc419504cbf152f0b6234028
+  - enabled: 1
     path: Assets/Scenes/Test.unity
     guid: ecf6590da82f95c4c9656b37aac7fa1e
   m_configObjects: {}
