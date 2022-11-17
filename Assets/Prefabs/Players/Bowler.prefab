@@ -499,6 +499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6414339831078641116}
   - component: {fileID: 7333998254648185046}
+  - component: {fileID: 8855614403316714412}
   m_Layer: 0
   m_Name: Bowler
   m_TagString: Untagged
@@ -547,6 +548,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8855614403316714412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6414339831078641119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 235a58c2dd222354eb34ce2fa1b2a54c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 7333998254648185046}
+  ballThrower: {fileID: 0}
+  debugPower: 0
+  debugTarget: {x: 0, y: 0, z: 0}
 --- !u!1 &6414339831083693327
 GameObject:
   m_ObjectHideFlags: 0

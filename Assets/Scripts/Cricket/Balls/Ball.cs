@@ -47,6 +47,7 @@ namespace Cricket.Balls
 
             HitByBat = false;
             _rb.velocity = Vector3.zero;
+            _rb.useGravity = false;
 
             gameObject.SetActive(false);
         }
@@ -65,6 +66,7 @@ namespace Cricket.Balls
             if ((groundLayerMask & collisionObjectLayerMask) == 0) return;
             Log("Ground Hit");
             if (!_crossedBoundary) _dropCount++;
+            _rb.useGravity = true;
         }
 
         private void CheckBoundary(int collisionObjectLayerMask)

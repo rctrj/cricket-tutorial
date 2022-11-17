@@ -40,12 +40,5 @@ namespace Cricket.Balls
             ball.Pool = _ballPool;
             return ball;
         }
-
-        //region debug areas. TODO: Remove
-        [SerializeField] private float debugPower;
-        [SerializeField] private Vector3 debugTarget;
-
-        public void DebugThrowBall() => ThrowBall(debugTarget, debugPower);
-        //endregion
     }
 }
