@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TeamSelectionScene.unity
     guid: e36a396de679eaf43a7c44aa1238dec2
+  - enabled: 1
+    path: Assets/Scenes/AiScene.unity
+    guid: 69fe11e6ce480fa4b8e988eadd7bce23
   m_configObjects: {}

@@ -134,7 +134,12 @@ namespace Cricket.GameManagers
         private void OnInningsComplete()
         {
             IsBattingSide = !IsBattingSide;
-            if (!inningsManager.IsFirstInnings) return;
+            if (!inningsManager.IsFirstInnings)
+            {
+                uiManager.GameOver();
+                return;
+            }
+
             inningsManager.StartNextInning();
             DelayedRunner.Instance.RunWithDelay(2, () => ChangeState(GameState.Idle));
         }
@@ -175,15 +180,23 @@ namespace Cricket.GameManagers
 
         public void Out()
         {
+            if (inningsManager.IsInningsOver) return;
+
             inningsManager.Out();
             uiManager.Out();
 
             _currentBall.Free();
-            DelayedRunner.Instance.RunWithDelay(2, OnBallFlowComplete);
+            DelayedRunner.Instance.RunWithDelay(1, OnBallFlowComplete);
         }
 
         private void OnBallFlowComplete()
         {
+            if (!inningsManager.IsFirstInnings && _oppScore > _selfScore)
+            {
+                uiManager.GameOver();
+                return;
+            }
+
             ChangeState(inningsManager.IsInningsOver ? GameState.InningsChange : GameState.Idle);
             camFollow.Reset();
         }
