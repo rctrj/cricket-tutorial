@@ -562,8 +562,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 7333998254648185046}
   ballThrower: {fileID: 0}
-  debugPower: 0
-  debugTarget: {x: 0, y: 0, z: 0}
 --- !u!1 &6414339831083693327
 GameObject:
   m_ObjectHideFlags: 0

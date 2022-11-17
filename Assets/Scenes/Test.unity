@@ -868,51 +868,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077784312}
   m_CullTransparentMesh: 1
---- !u!1 &1149181789
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1149181790}
-  - component: {fileID: 1149181791}
-  m_Layer: 0
-  m_Name: BallThrower
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1149181790
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149181789}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.29, y: 3.48, z: 14.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1149181791
+--- !u!114 &1149181791 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6686771697305235545, guid: 35b48d33ead40224c9eb8fe6e92e4e86, type: 3}
+  m_PrefabInstance: {fileID: 6686771696306532102}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149181789}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 131be6fbad7549cbab104701543098af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballPrefab: {fileID: 292261800}
 --- !u!1001 &1952622422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1164,6 +1130,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f73505c02ff9da4c8326fc75b8e5e59, type: 3}
+--- !u!1001 &6686771696306532102
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6686771697305235544, guid: 35b48d33ead40224c9eb8fe6e92e4e86, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686771697305235544, guid: 35b48d33ead40224c9eb8fe6e92e4e86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686771697305235544, guid: 35b48d33ead40224c9eb8fe6e92e4e86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686771697305235544, guid: 35b48d33ead40224c9eb8fe6e92e4e86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686771697305235544, guid: 35b48d33ead40224c9eb8fe6e92e4e86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686771697305235544, guid: 35b48d33ead40224c9eb8fe6e92e4e86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686771697305235544, guid: 35b48d33ead40224c9eb8fe6e92e4e86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686771697305235544, guid: 35b48d33ead40224c9eb8fe6e92e4e86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686771697305235544, guid: 35b48d33ead40224c9eb8fe6e92e4e86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686771697305235544, guid: 35b48d33ead40224c9eb8fe6e92e4e86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686771697305235544, guid: 35b48d33ead40224c9eb8fe6e92e4e86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686771697305235545, guid: 35b48d33ead40224c9eb8fe6e92e4e86, type: 3}
+      propertyPath: ballPrefab
+      value: 
+      objectReference: {fileID: 292261800}
+    - target: {fileID: 6686771697305235547, guid: 35b48d33ead40224c9eb8fe6e92e4e86, type: 3}
+      propertyPath: m_Name
+      value: BallThrower
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 35b48d33ead40224c9eb8fe6e92e4e86, type: 3}
 --- !u!114 &7463249665981786490 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8855614403316714412, guid: 4f73505c02ff9da4c8326fc75b8e5e59, type: 3}

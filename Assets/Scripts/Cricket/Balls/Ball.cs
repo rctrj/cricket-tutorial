@@ -64,7 +64,6 @@ namespace Cricket.Balls
         private void CheckHitWithGround(int collisionObjectLayerMask)
         {
             if ((groundLayerMask & collisionObjectLayerMask) == 0) return;
-            Log("Ground Hit");
             if (!_crossedBoundary) _dropCount++;
             _rb.useGravity = true;
         }
@@ -72,14 +71,12 @@ namespace Cricket.Balls
         private void CheckBoundary(int collisionObjectLayerMask)
         {
             if ((boundaryLayerMask & collisionObjectLayerMask) == 0) return;
-            Log("Crossed Boundary");
             _crossedBoundary = true;
         }
 
         private void CheckDestruction(int collisionObjectLayerMask)
         {
             if ((ballDestroyerLayerMask & collisionObjectLayerMask) == 0) return;
-            Log("Destroying Ball");
             Pool.Free(this);
         }
 

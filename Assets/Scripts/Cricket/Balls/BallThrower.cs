@@ -19,18 +19,24 @@ namespace Cricket.Balls
         public void ThrowBall(Vector3 target, float power)
         {
             var ball = GetNewBall();
+            ThrowBall(ball, target, power);
+        }
+
+        public void ThrowBall(Ball ball, Vector3 target, float power)
+        {
+            ball.gameObject.SetActive(true);
             var dir = target - _transform.position;
             dir = dir.normalized;
             var force = dir * power;
             ball.Rigidbody.AddForce(force, ForceMode.Impulse);
         }
 
-        private Ball GetNewBall()
+        public Ball GetNewBall()
         {
             var spawnPos = _transform.position;
             var ball = _ballPool.Fetch();
+            ball.gameObject.SetActive(false);
             ball.transform.position = spawnPos;
-            ball.gameObject.SetActive(true);
             return ball;
         }
 

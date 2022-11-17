@@ -177,6 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 975532646114838459}
   - component: {fileID: 975532646114838457}
+  - component: {fileID: 3490695371742829328}
   m_Layer: 5
   m_Name: BatButton
   m_TagString: Untagged
@@ -249,3 +250,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3490695371742829328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975532646114838436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44fb7fffd18148c3bd12d5d7eb7dcde3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 975532646114838457}
+  minDelay: 0.1

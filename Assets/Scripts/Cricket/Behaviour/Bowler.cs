@@ -14,20 +14,22 @@ namespace Cricket.Behaviour
 
         public void WaitForRunUp() => animator.Play(IdleStateName);
 
-        public void Bowl(Vector3 target, float power)
+        public Ball Bowl(Vector3 target, float power)
         {
             animator.Play(BowlingStateName);
-            StartCoroutine(ThrowBallCoroutine(target, power));
+            var ball = ballThrower.GetNewBall();
+            StartCoroutine(ThrowBallCoroutine(ball, target, power));
+            return ball;
         }
 
-        private IEnumerator ThrowBallCoroutine(Vector3 target, float power)
+        private IEnumerator ThrowBallCoroutine(Ball ball, Vector3 target, float power)
         {
             // state is updated in the animator when the frame is completed.
             // This is why I'm waiting for the end of the frame,
             // otherwise IsBowlingAnimationPlaying returns false for the first frame
             yield return new WaitForEndOfFrame();
             yield return new WaitWhile(IsBowlingAnimationPlaying);
-            ballThrower.ThrowBall(target, power);
+            ballThrower.ThrowBall(ball, target, power);
         }
 
         private bool IsBowlingAnimationPlaying()
@@ -36,15 +38,5 @@ namespace Cricket.Behaviour
             if (!stateInfo.IsName(BowlingStateName)) return false;
             return stateInfo.length > stateInfo.normalizedTime;
         }
-
-        #region debug
-
-        // TODO: Remove
-        [SerializeField] private float debugPower;
-        [SerializeField] private Vector3 debugTarget;
-
-        public void DebugThrowBall() => Bowl(debugTarget, debugPower);
-
-        #endregion
     }
 }
