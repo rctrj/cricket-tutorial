@@ -1219,11 +1219,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0acba923fc71483eb08985bd31d7bc0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toast: {fileID: 2034730001}
+  sceneLoader: {fileID: 1306054870}
   bowler: {fileID: 1450793883}
   batsman: {fileID: 207470411}
   indicators: {fileID: 1101210476}
-  toast: {fileID: 2034730001}
-  sceneLoader: {fileID: 1306054870}
 --- !u!4 &1306054869
 Transform:
   m_ObjectHideFlags: 0
@@ -1279,7 +1279,7 @@ MonoBehaviour:
   animator: {fileID: 1450793881}
   ballThrower: {fileID: 1513274343}
   xBounds: {x: -0.5, y: 0.5}
-  zBounds: {x: -9, y: -12}
+  zBounds: {x: -5, y: -9}
   yPointToBowl: 0.2
   power: 20
 --- !u!1001 &1513274342
@@ -1666,7 +1666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6234363463209276452, guid: 85927363972da8e48b5cc346788082d4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000030517578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6234363463209276452, guid: 85927363972da8e48b5cc346788082d4, type: 3}
       propertyPath: m_AnchoredPosition.y

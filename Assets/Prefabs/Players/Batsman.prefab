@@ -368,7 +368,7 @@ MonoBehaviour:
   animator: {fileID: 1182146273419783793}
   batTransform: {fileID: 7206705614947771743}
   allowedAnglesToHit: {x: 0, y: 90}
-  hitPower: 600
+  hitPower: 800
 --- !u!1 &3216726119700941736
 GameObject:
   m_ObjectHideFlags: 0

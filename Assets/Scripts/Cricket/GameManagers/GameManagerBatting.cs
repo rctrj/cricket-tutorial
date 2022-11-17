@@ -2,8 +2,6 @@
 using Cricket.Balls;
 using Cricket.Behaviour;
 using Cricket.UI;
-using Scene;
-using TMPro;
 using UnityEngine;
 
 namespace Cricket.GameManagers
@@ -16,6 +14,7 @@ namespace Cricket.GameManagers
         [SerializeField] private Indicators indicators;
 
         private int _successfulShotsCount;
+        private Coroutine _ballDestructionCoroutine;
 
         private void Start()
         {
@@ -28,10 +27,19 @@ namespace Cricket.GameManagers
             yield return new WaitForSeconds(delay);
 
             bowler.WaitForRunUp();
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(0.1f);
 
             var ball = bowler.Bowl();
             batsman.CurrentBall = ball;
+
+            _ballDestructionCoroutine = StartCoroutine(DestroyBallAfterTimeout(5, ball));
+        }
+
+        private IEnumerator DestroyBallAfterTimeout(float timeout, Ball ball)
+        {
+            yield return new WaitForSeconds(timeout);
+            OnBallDestroyed(ball);
+            Destroy(ball);
         }
 
         private void OnBallHit()
@@ -49,6 +57,8 @@ namespace Cricket.GameManagers
         {
             if (!ball.HitByBat) ShowToast("Try again!");
             StartCoroutine(Bowl(2));
+            StopCoroutine(_ballDestructionCoroutine);
+            _ballDestructionCoroutine = null;
         }
     }
 }
