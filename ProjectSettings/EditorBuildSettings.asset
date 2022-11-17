@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/BallAimScene.unity
     guid: 7e5446e317552c34cb72381f58619ea8
   - enabled: 1
-    path: Assets/Scenes/Test.unity
-    guid: ecf6590da82f95c4c9656b37aac7fa1e
+    path: Assets/Scenes/BallPowerScene.unity
+    guid: c3115efd9e5a7a544927fc8b243c49fa
+  - enabled: 1
+    path: Assets/Scenes/BowlingScene.unity
+    guid: 5847b63cccdcf3e40919216b366b8477
+  - enabled: 1
+    path: Assets/Scenes/TeamSelectionScene.unity
+    guid: e36a396de679eaf43a7c44aa1238dec2
   m_configObjects: {}

@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a36bfb6aad49944f9a44414031eff51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadDelay: 3
+  loadDelay: 2
   sceneName: BatsmanScene
   runOnAwake: 1
 --- !u!4 &958788585

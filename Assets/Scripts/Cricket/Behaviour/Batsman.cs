@@ -27,6 +27,7 @@ namespace Cricket.Behaviour
 
             //for animation
             yield return new WaitForSeconds(0.1f);
+            if (!CurrentBall) yield break;
 
             var currentLocation = batTransform.position;
             currentLocation.y = 0; //doing this to raise the ball on hit
