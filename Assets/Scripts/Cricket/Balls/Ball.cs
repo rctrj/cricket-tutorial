@@ -47,6 +47,7 @@ namespace Cricket.Balls
 
             HitByBat = false;
             _rb.velocity = Vector3.zero;
+            _rb.angularVelocity = Vector3.zero;
             _rb.useGravity = false;
 
             gameObject.SetActive(false);
