@@ -20,8 +20,10 @@ namespace Utils
             var destinationPos = destination.anchoredPosition;
             var sourcePos = source.anchoredPosition;
 
+            var destinationWidth = destination.rect.width;
+
             var distance = Vector2.Distance(destinationPos, sourcePos);
-            if (distance >= 1 / 2f) return;
+            if (distance >= destinationWidth / 2f) return;
             _isRunning = false;
             onComplete.Invoke();
         }
