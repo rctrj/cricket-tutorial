@@ -219,9 +219,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerBallPower, Assembly-CSharp
-        m_MethodName: OnStop
+      - m_Target: {fileID: 733352710}
+        m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerBowling, Assembly-CSharp
+        m_MethodName: SetTarget
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -324,7 +324,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3452759840120976588, guid: 73a2e6a5031cd0641a9bde01e3a3082e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 73a2e6a5031cd0641a9bde01e3a3082e, type: 3}
 --- !u!1 &121342350
 GameObject:
@@ -549,9 +550,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerBallPower, Assembly-CSharp
-        m_MethodName: OnStop
+      - m_Target: {fileID: 733352710}
+        m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerBowling, Assembly-CSharp
+        m_MethodName: SetPower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -599,6 +600,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340566786}
   m_CullTransparentMesh: 1
+--- !u!1 &399683595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3216726119693411192, guid: 73a2e6a5031cd0641a9bde01e3a3082e, type: 3}
+  m_PrefabInstance: {fileID: 41788485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &399683597 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1182146273419783793, guid: 73a2e6a5031cd0641a9bde01e3a3082e, type: 3}
+  m_PrefabInstance: {fileID: 41788485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &399683599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399683595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ebe6793cd7b449aa3cc62dabe98ccb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxAllowedHitDistance: 10
+  animator: {fileID: 399683597}
+  batTransform: {fileID: 1306692886}
+  allowedAnglesToHit: {x: 0, y: 90}
+  hitPower: 600
+  minTime: 1.1
+  maxTime: 2
 --- !u!1001 &458670776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -721,6 +751,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dee88792aed068a488848efa376c111b, type: 3}
+--- !u!114 &536595963 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5990210401915958486, guid: dee88792aed068a488848efa376c111b, type: 3}
+  m_PrefabInstance: {fileID: 536595962}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3427764ca8fa449cbbaaffdf583263d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!20 &604271924 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8143876998984093989, guid: 1c59d6ca11b52f64c9b047103d1b31d9, type: 3}
+  m_PrefabInstance: {fileID: 458670776}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &733352706
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 733352709}
   - component: {fileID: 733352707}
+  - component: {fileID: 733352710}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -768,6 +815,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &733352710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733352706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9a3c994b5d42868542ca15c719a83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toast: {fileID: 996674859}
+  sceneLoader: {fileID: 733352707}
+  target: {fileID: 1140711201}
+  powerMeter: {fileID: 165647199}
+  shootButton: {fileID: 340566786}
+  setButton: {fileID: 11768045}
+  indicators: {fileID: 2011478226}
+  bowler: {fileID: 1912740439}
+  batsman: {fileID: 399683599}
+  dragHandler: {fileID: 1140711203}
+  wickets: {fileID: 536595963}
 --- !u!1 &772161886
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +1041,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875238814}
   m_CullTransparentMesh: 1
+--- !u!114 &996674859 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6283800403719687234, guid: 8341a9bfa80578348a121ee4ffd94e22, type: 3}
+  m_PrefabInstance: {fileID: 1931758038}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1140711200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,6 +1134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1489675772}
+  isEnabled: 1
 --- !u!114 &1140711204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1226,6 +1308,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173825683}
   m_CullTransparentMesh: 1
+--- !u!4 &1306692886 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7206705614947771743, guid: 73a2e6a5031cd0641a9bde01e3a3082e, type: 3}
+  m_PrefabInstance: {fileID: 41788485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1362904606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1488,7 +1575,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 604271924}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1581,6 +1668,124 @@ PrefabInstance:
       objectReference: {fileID: 1870565816}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f73505c02ff9da4c8326fc75b8e5e59, type: 3}
+--- !u!1 &1579070636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1579070642}
+  - component: {fileID: 1579070641}
+  - component: {fileID: 1579070640}
+  - component: {fileID: 1579070639}
+  - component: {fileID: 1579070638}
+  - component: {fileID: 1579070637}
+  m_Layer: 8
+  m_Name: Destructors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1579070637
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579070636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 100, z: 5}
+  m_Center: {x: 0, y: 0, z: -20}
+--- !u!65 &1579070638
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579070636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 100, z: 5}
+  m_Center: {x: 0, y: 0, z: 20}
+--- !u!65 &1579070639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579070636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 100, z: 40}
+  m_Center: {x: 10, y: 0, z: 0}
+--- !u!65 &1579070640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579070636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 100, z: 40}
+  m_Center: {x: -10, y: 0, z: 0}
+--- !u!114 &1579070641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579070636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f66c7acefe1455dbf1882c308fb0fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  onBallDestroy:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 733352710}
+        m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerBowling, Assembly-CSharp
+        m_MethodName: OnBallDestroyed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &1579070642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579070636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1870565815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1647,6 +1852,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 131be6fbad7549cbab104701543098af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1912740439 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8855614403316714412, guid: 4f73505c02ff9da4c8326fc75b8e5e59, type: 3}
+  m_PrefabInstance: {fileID: 1495142729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 235a58c2dd222354eb34ce2fa1b2a54c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1925004205
@@ -1965,7 +2181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6234363463209276452, guid: 85927363972da8e48b5cc346788082d4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000030517578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6234363463209276452, guid: 85927363972da8e48b5cc346788082d4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1994,6 +2210,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6234363463209276452, guid: 85927363972da8e48b5cc346788082d4, type: 3}
   m_PrefabInstance: {fileID: 2011478224}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2011478226 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6234363463209276448, guid: 85927363972da8e48b5cc346788082d4, type: 3}
+  m_PrefabInstance: {fileID: 2011478224}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3cca9ebf534f42a9fb1b5ac8ce17d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2202701439267229845
 PrefabInstance:
   m_ObjectHideFlags: 0

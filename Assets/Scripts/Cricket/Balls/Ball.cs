@@ -65,7 +65,7 @@ namespace Cricket.Balls
         {
             if ((groundLayerMask & collisionObjectLayerMask) == 0) return;
             if (!_crossedBoundary) _dropCount++;
-            _rb.useGravity = true;
+            // _rb.useGravity = true;
         }
 
         private void CheckBoundary(int collisionObjectLayerMask)

@@ -8,15 +8,12 @@ using UnityEngine;
 
 namespace Cricket.GameManagers
 {
-    public class GameManagerBatting : MonoBehaviour
+    public class GameManagerBatting : GameManager
     {
         [SerializeField] private AIBowler bowler;
         [SerializeField] private Batsman batsman;
 
         [SerializeField] private Indicators indicators;
-        [SerializeField] private TMP_Text toast;
-
-        [SerializeField] private DelayedSceneLoader sceneLoader;
 
         private int _successfulShotsCount;
 
@@ -52,13 +49,6 @@ namespace Cricket.GameManagers
         {
             if (!ball.HitByBat) ShowToast("Try again!");
             StartCoroutine(Bowl(2));
-        }
-
-        private void ShowToast(string message)
-        {
-            toast.gameObject.SetActive(false);
-            toast.text = message;
-            toast.gameObject.SetActive(true);
         }
     }
 }

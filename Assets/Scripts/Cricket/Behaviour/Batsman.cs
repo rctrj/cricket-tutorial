@@ -19,7 +19,7 @@ namespace Cricket.Behaviour
 
         public Action OnBallHit;
 
-        public void Swing() => StartCoroutine(SwingBatCoroutine());
+        public virtual void Swing() => StartCoroutine(SwingBatCoroutine());
 
         private IEnumerator SwingBatCoroutine()
         {
@@ -44,8 +44,9 @@ namespace Cricket.Behaviour
 
             Debug.Log("Hitting Ball");
             var power = dir * hitPower;
-            CurrentBall.Rigidbody.velocity = Vector3.one;
+            CurrentBall.Rigidbody.velocity = Vector3.zero;
             CurrentBall.Rigidbody.AddForce(power);
+            CurrentBall.Rigidbody.useGravity = true;
             CurrentBall.Hit();
 
             OnBallHit?.Invoke();
