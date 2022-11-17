@@ -9,6 +9,6 @@ PhysicMaterial:
   m_Name: GroundPhysicsMaterial
   dynamicFriction: 20
   staticFriction: 20
-  bounciness: 0.3
+  bounciness: 0.6
   frictionCombine: 2
   bounceCombine: 2

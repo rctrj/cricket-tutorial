@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Cricket.Balls
 {
+    [DefaultExecutionOrder(-1)]
     public class Ball : MonoBehaviour, IPoolable
     {
         private const float BallMovingTolerance = 0;
@@ -13,14 +14,14 @@ namespace Cricket.Balls
 
         public Pool<Ball> Pool;
 
-        private bool _crossedBoundary;
         private int _dropCount;
 
         private Rigidbody _rb;
 
         public bool HitByBat { get; private set; }
-        public bool WasDropped => _dropCount == 0;
+        public bool WasDropped => _dropCount != 0;
         public bool HasStopped => Rigidbody.velocity.magnitude <= BallMovingTolerance;
+        public bool CrossedBoundary { get; private set; }
 
         public Rigidbody Rigidbody => _rb;
 
@@ -43,7 +44,7 @@ namespace Cricket.Balls
         public void Reset()
         {
             _dropCount = 0;
-            _crossedBoundary = false;
+            CrossedBoundary = false;
 
             HitByBat = false;
             _rb.velocity = Vector3.zero;
@@ -62,17 +63,18 @@ namespace Cricket.Balls
             HitByBat = true;
         }
 
+        public void Free() => Pool.Free(this);
+
         private void CheckHitWithGround(int collisionObjectLayerMask)
         {
             if ((groundLayerMask & collisionObjectLayerMask) == 0) return;
-            if (!_crossedBoundary) _dropCount++;
-            // _rb.useGravity = true;
+            if (!CrossedBoundary) _dropCount++;
         }
 
         private void CheckBoundary(int collisionObjectLayerMask)
         {
             if ((boundaryLayerMask & collisionObjectLayerMask) == 0) return;
-            _crossedBoundary = true;
+            CrossedBoundary = true;
         }
 
         private void CheckDestruction(int collisionObjectLayerMask)
@@ -80,7 +82,5 @@ namespace Cricket.Balls
             if ((ballDestroyerLayerMask & collisionObjectLayerMask) == 0) return;
             Pool.Free(this);
         }
-
-        private void Log(object obj) => Debug.Log("[Ball] " + obj);
     }
 }

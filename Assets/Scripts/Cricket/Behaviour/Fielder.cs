@@ -27,7 +27,6 @@ namespace Cricket.Behaviour
 
         public void ChaseBall(Ball ball)
         {
-            Debug.Log("chase ball called");
             currentBall = ball;
             _isChasing = true;
         }

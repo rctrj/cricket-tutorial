@@ -150,8 +150,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2568041}
   m_LocalRotation: {x: -0, y: -0.5125557, z: -0, w: 0.858654}
-  m_LocalPosition: {x: -35.7, y: 0, z: 32.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -35.7, y: 50, z: 32.5}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -199,7 +199,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -235,8 +235,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26422798}
   m_LocalRotation: {x: -1.1641532e-10, y: -0.13668188, z: -6.548362e-11, w: 0.99061507}
-  m_LocalPosition: {x: -10.9, y: 0, z: 50}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -10.9, y: 50, z: 50}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -284,7 +284,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -496,8 +496,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205742643}
   m_LocalRotation: {x: 0, y: 0.65821654, z: 0, w: 0.75282866}
-  m_LocalPosition: {x: 46, y: 0, z: 9.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 46, y: 50, z: 9.9}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -545,7 +545,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -743,6 +743,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3452759840120976588, guid: 73a2e6a5031cd0641a9bde01e3a3082e, type: 3}
+      propertyPath: hitPower
+      value: 800
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73a2e6a5031cd0641a9bde01e3a3082e, type: 3}
 --- !u!1 &347660011
@@ -772,8 +776,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347660011}
   m_LocalRotation: {x: 0, y: 0.61989546, z: 0, w: 0.7846845}
-  m_LocalPosition: {x: 43.9, y: 0, z: 18.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 43.9, y: 50, z: 18.1}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -821,7 +825,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -967,6 +971,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cff17db46295b854999861078eb80a17, type: 3}
+--- !u!1 &380435353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4843648759031385502, guid: dee88792aed068a488848efa376c111b, type: 3}
+  m_PrefabInstance: {fileID: 1609588305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &388074420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1049,6 +1058,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8947671040426929719, guid: 346f726db423b3a47a0fb1e9f0cb3d25, type: 3}
   m_PrefabInstance: {fileID: 388074420}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &423733446 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7593890123990295142, guid: dee88792aed068a488848efa376c111b, type: 3}
+  m_PrefabInstance: {fileID: 1609588305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &516192903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,9 +1110,15 @@ Transform:
   - {fileID: 26422799}
   - {fileID: 1007421574}
   - {fileID: 1685130893}
+  - {fileID: 1160438635}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: -0.059, y: -0.097, z: 0.066}
+--- !u!1 &518871347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8248329810097831388, guid: dee88792aed068a488848efa376c111b, type: 3}
+  m_PrefabInstance: {fileID: 1609588305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &577742694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,8 +1280,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609232659}
   m_LocalRotation: {x: 0, y: 0.3894294, z: 0, w: 0.9210564}
-  m_LocalPosition: {x: 28.9, y: 0, z: 38.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 28.9, y: 50, z: 38.2}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -1309,7 +1329,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1501,17 +1521,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f71af7f1dc562e469fc2502ed5b989a, type: 3}
---- !u!114 &808282410 stripped
+--- !u!114 &808282412
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5990210401915958486, guid: dee88792aed068a488848efa376c111b, type: 3}
-  m_PrefabInstance: {fileID: 1609588305}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 380435353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3427764ca8fa449cbbaaffdf583263d6, type: 3}
+  m_Script: {fileID: 11500000, guid: c0917622daff449c82b519d709d0f0f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wicketItems:
+  - {fileID: 1582185994}
+  - {fileID: 518871347}
+  - {fileID: 423733446}
+  ballLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  gameManager: {fileID: 1459641922}
 --- !u!1 &857049528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,8 +1568,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857049528}
   m_LocalRotation: {x: 0, y: 0.5125525, z: 0, w: 0.8586559}
-  m_LocalPosition: {x: 35.7, y: 0, z: 32.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 35.7, y: 50, z: 32.5}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -1588,7 +1617,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1692,8 +1721,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007421573}
   m_LocalRotation: {x: 0, y: 0.31653494, z: 0, w: 0.94858086}
-  m_LocalPosition: {x: 23.4, y: -0, z: 40.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 23.4, y: 50, z: 40.9}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -1741,7 +1770,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1777,8 +1806,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019112697}
   m_LocalRotation: {x: -0, y: -0.31653404, z: -0, w: 0.94858116}
-  m_LocalPosition: {x: -23.4, y: -0, z: 40.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -23.4, y: 50, z: 40.9}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -1826,7 +1855,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2029,6 +2058,91 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.211}
   m_SizeDelta: {x: 10, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1160438634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1160438635}
+  - component: {fileID: 1160438638}
+  - component: {fileID: 1160438637}
+  - component: {fileID: 1160438636}
+  m_Layer: 7
+  m_Name: Cube (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1160438635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160438634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21.9, y: 50, z: 48.7}
+  m_LocalScale: {x: 50.21, y: 100, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 516192904}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1160438636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160438634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f66c7acefe1455dbf1882c308fb0fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  onBallDestroy:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1459641922}
+        m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
+        m_MethodName: OnBallDestroyed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!65 &1160438637
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160438634}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 100, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1160438638
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160438634}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1167056362 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5182309752993133596, guid: 346f726db423b3a47a0fb1e9f0cb3d25, type: 3}
@@ -2040,6 +2154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267f86e8207e486b8f6eb054b8b09a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1169541351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8143876998984093991, guid: 1c59d6ca11b52f64c9b047103d1b31d9, type: 3}
+  m_PrefabInstance: {fileID: 1607863179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1179047525 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 975532646114838436, guid: cff17db46295b854999861078eb80a17, type: 3}
@@ -2077,8 +2196,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191407692}
   m_LocalRotation: {x: -0, y: -0.65821546, z: -0, w: 0.7528297}
-  m_LocalPosition: {x: -46, y: 0, z: 9.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -46, y: 50, z: 9.9}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -2126,7 +2245,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2162,8 +2281,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272687617}
   m_LocalRotation: {x: -0, y: -0.31653404, z: -0, w: 0.94858116}
-  m_LocalPosition: {x: -17.3, y: 0, z: 45.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -17.3, y: 50, z: 45.5}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -2211,7 +2330,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2247,8 +2366,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356271756}
   m_LocalRotation: {x: 0, y: 0.68872786, z: 0, w: 0.72501993}
-  m_LocalPosition: {x: 47.7, y: 0, z: 4.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 47.7, y: 50, z: 4.6}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -2296,7 +2415,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2417,6 +2536,7 @@ GameObject:
   - component: {fileID: 1459641922}
   - component: {fileID: 1459641921}
   - component: {fileID: 1459641924}
+  - component: {fileID: 1459641925}
   m_Layer: 0
   m_Name: Director
   m_TagString: Untagged
@@ -2454,11 +2574,13 @@ MonoBehaviour:
   aiBatsman: {fileID: 1956913557}
   bowler: {fileID: 1426029981}
   aiBowler: {fileID: 1426029984}
-  wickets: {fileID: 808282410}
+  wickets: {fileID: 808282412}
   target: {fileID: 2136323729}
-  isBattingSide: 0
+  isBattingSide: 1
   powerMeter: {fileID: 627750026}
   uiManager: {fileID: 1459641924}
+  inningsManager: {fileID: 1459641925}
+  camFollow: {fileID: 2110897426}
   fielders:
   - {fileID: 1859498972}
   - {fileID: 1982731843}
@@ -2500,6 +2622,19 @@ MonoBehaviour:
   powerMeter: {fileID: 627750024}
   dragHandler: {fileID: 2136323732}
   isBattingSide: 0
+--- !u!114 &1459641925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459641919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e111d7528af4c2aba15651c7a38d68d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fsm: {fileID: 1459641921}
 --- !u!1 &1489271461
 GameObject:
   m_ObjectHideFlags: 0
@@ -2527,8 +2662,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489271461}
   m_LocalRotation: {x: -0, y: -0.68872863, z: -0, w: 0.7250192}
-  m_LocalPosition: {x: -47.7, y: 0, z: 4.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -47.7, y: 50, z: 4.6}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -2576,7 +2711,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2785,8 +2920,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528376518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 48.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 50, z: 48.7}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -2834,7 +2969,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2870,8 +3005,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529782561}
   m_LocalRotation: {x: 0, y: 0.53679895, z: 0, w: 0.84371024}
-  m_LocalPosition: {x: 39.1, y: 0, z: 26.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 39.1, y: 50, z: 26.1}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -2919,7 +3054,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2955,8 +3090,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559932465}
   m_LocalRotation: {x: -0, y: -0.38942823, z: -0, w: 0.92105687}
-  m_LocalPosition: {x: -28.9, y: 0, z: 38.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -28.9, y: 50, z: 38.2}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -3004,7 +3139,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3013,6 +3148,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1582185994 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2392100924978688244, guid: dee88792aed068a488848efa376c111b, type: 3}
+  m_PrefabInstance: {fileID: 1609588305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1607863179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3125,7 +3265,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crease
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5990210401915958486, guid: dee88792aed068a488848efa376c111b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dee88792aed068a488848efa376c111b, type: 3}
 --- !u!1001 &1615914001
 PrefabInstance:
@@ -3247,8 +3388,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657712384}
   m_LocalRotation: {x: -0, y: -0.61989737, z: -0, w: 0.7846829}
-  m_LocalPosition: {x: -43.9, y: 0, z: 18.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -43.9, y: 50, z: 18.1}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -3296,7 +3437,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3433,8 +3574,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685130892}
   m_LocalRotation: {x: 0, y: 0.13668379, z: 0, w: 0.9906148}
-  m_LocalPosition: {x: 10.9, y: 0, z: 50}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 10.9, y: 50, z: 50}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -3482,7 +3623,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3704,8 +3845,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816773010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -19.8}
-  m_LocalScale: {x: 50, y: 50, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: -23.9}
+  m_LocalScale: {x: 50, y: 50, z: 13.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3989,8 +4130,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1993206516}
   m_LocalRotation: {x: 0, y: 0.31653494, z: 0, w: 0.94858086}
-  m_LocalPosition: {x: 17.3, y: 0, z: 45.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 17.3, y: 50, z: 45.5}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -4038,7 +4179,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4074,8 +4215,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077058023}
   m_LocalRotation: {x: -0, y: -0.53679556, z: -0, w: 0.8437124}
-  m_LocalPosition: {x: -39.1, y: 0, z: 26.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -39.1, y: 50, z: 26.1}
+  m_LocalScale: {x: 1, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516192904}
@@ -4123,7 +4264,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1459641922}
         m_TargetAssemblyTypeName: Cricket.GameManagers.GameManagerAIGame, Assembly-CSharp
         m_MethodName: OnBallDestroyed
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4137,6 +4278,20 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 8143876998984093989, guid: 1c59d6ca11b52f64c9b047103d1b31d9, type: 3}
   m_PrefabInstance: {fileID: 1607863179}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2110897426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169541351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc5bf74049e4f55b122718ff94c5787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  isFollowing: 0
 --- !u!1001 &2117928456
 PrefabInstance:
   m_ObjectHideFlags: 0

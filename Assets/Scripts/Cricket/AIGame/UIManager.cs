@@ -44,6 +44,9 @@ namespace Cricket.AIGame
                     case GameState.BallHit:
                         OnBallHit();
                         break;
+                    case GameState.InningsChange:
+                        OnInningsChange();
+                        break;
                     default:
                         throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
                 }
@@ -100,6 +103,19 @@ namespace Cricket.AIGame
             aimObject.SetActive(false);
             powerMeter.SetActive(false);
             dragHandler.IsEnabled = false;
+        }
+
+        private void OnInningsChange()
+        {
+        }
+
+        public void AddScore(int count, int finalCount)
+        {
+            Debug.Log("adding score: " + count + " total : " + finalCount);
+        }
+
+        public void Out()
+        {
         }
     }
 }

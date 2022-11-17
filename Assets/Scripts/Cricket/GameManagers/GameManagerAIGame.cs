@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Cricket.AIGame;
 using Cricket.Balls;
@@ -25,8 +26,12 @@ namespace Cricket.GameManagers
         [SerializeField] private PowerMeter powerMeter;
 
         [SerializeField] private UIManager uiManager;
+        [SerializeField] private InningsManager inningsManager;
 
+        [SerializeField] private ObjectFollower camFollow;
         [SerializeField] private List<Fielder> fielders;
+
+        private int _selfScore, _oppScore;
 
         private Ball _currentBall;
 
@@ -68,6 +73,9 @@ namespace Cricket.GameManagers
                     case GameState.BallHit:
                         OnBallHit();
                         break;
+                    case GameState.InningsChange:
+                        OnInningsComplete();
+                        break;
                     default:
                         throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
                 }
@@ -94,13 +102,11 @@ namespace Cricket.GameManagers
 
         private void OnSettingAim()
         {
-            Debug.Log("Setting Aim");
             if (isBattingSide) DelayedRunner.Instance.RunWithDelay(0.5f, () => ChangeState(GameState.SettingPower));
         }
 
         private void OnSettingPower()
         {
-            Debug.Log("Setting Power");
             if (isBattingSide) DelayedRunner.Instance.RunWithDelay(0.5f, () => ChangeState(GameState.BallThrown));
         }
 
@@ -121,15 +127,39 @@ namespace Cricket.GameManagers
 
         private void OnBallHit()
         {
-            Debug.Log("On Ball HIt. fielder count: " + fielders.Count);
             foreach (var fielder in fielders) fielder.ChaseBall(_currentBall);
+            camFollow.Follow(_currentBall.transform);
+        }
+
+        private void OnInningsComplete()
+        {
+            IsBattingSide = !IsBattingSide;
+            if (!inningsManager.IsFirstInnings) return;
+            inningsManager.StartNextInning();
+            DelayedRunner.Instance.RunWithDelay(2, () => ChangeState(GameState.Idle));
         }
 
         public void OnBallDestroyed(Ball ball)
         {
-            ChangeState(GameState.Idle);
+            if (fsm.State is not (GameState.BallHit or GameState.BallThrown)) return;
+            OnBallFlowComplete();
+            StartCoroutine(ProcessBall(ball));
+        }
 
-            //do scoring
+        private IEnumerator ProcessBall(Ball ball)
+        {
+            yield return new WaitForEndOfFrame();
+            if (!ball.HitByBat) yield break;
+            if (ball.CrossedBoundary) AddScore(ball.WasDropped ? 4 : 6);
+            ball.Free();
+        }
+
+        private void AddScore(int count)
+        {
+            if (IsBattingSide) _selfScore += count;
+            else _oppScore += count;
+
+            uiManager.AddScore(count, IsBattingSide ? _selfScore : _oppScore);
         }
 
         public void OnAimSet() => ChangeState(GameState.SettingPower);
@@ -137,8 +167,25 @@ namespace Cricket.GameManagers
 
         public void OnBallCaught(float elapsed)
         {
-            //todo
-            ChangeState(GameState.Idle);
+            if (_currentBall.WasDropped) AddScore(1 + (int)(elapsed / 5));
+            else Out();
+            _currentBall.Free();
+            OnBallFlowComplete();
+        }
+
+        public void Out()
+        {
+            inningsManager.Out();
+            uiManager.Out();
+
+            _currentBall.Free();
+            DelayedRunner.Instance.RunWithDelay(2, OnBallFlowComplete);
+        }
+
+        private void OnBallFlowComplete()
+        {
+            ChangeState(inningsManager.IsInningsOver ? GameState.InningsChange : GameState.Idle);
+            camFollow.Reset();
         }
     }
 }
