@@ -2,10 +2,9 @@
 using Cricket.Balls;
 using Cricket.Behaviour;
 using Cricket.UI;
+using Scene;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using Utils;
 
 namespace Cricket.GameManagers
 {
@@ -17,7 +16,7 @@ namespace Cricket.GameManagers
         [SerializeField] private Indicators indicators;
         [SerializeField] private TMP_Text toast;
 
-        [SerializeField] private string nextSceneName;
+        [SerializeField] private DelayedSceneLoader sceneLoader;
 
         private int _successfulShotsCount;
 
@@ -46,7 +45,7 @@ namespace Cricket.GameManagers
             if (_successfulShotsCount != indicators.TotalIndicators) return;
             ShowToast("Great!");
 
-            DelayedRunner.Instance.RunWithDelay(2, () => SceneManager.LoadScene(nextSceneName));
+            sceneLoader.LoadNextScene();
         }
 
         public void OnBallDestroyed(Ball ball)

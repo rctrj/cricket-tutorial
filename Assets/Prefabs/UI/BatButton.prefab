@@ -263,4 +263,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 975532646114838457}
-  minDelay: 0.1
+  minDelay: 2

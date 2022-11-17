@@ -1181,6 +1181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1306054869}
   - component: {fileID: 1306054868}
+  - component: {fileID: 1306054870}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1204,7 +1205,7 @@ MonoBehaviour:
   batsman: {fileID: 207470411}
   indicators: {fileID: 1101210476}
   toast: {fileID: 2034730001}
-  nextSceneName: BallAimScene
+  sceneLoader: {fileID: 1306054870}
 --- !u!4 &1306054869
 Transform:
   m_ObjectHideFlags: 0
@@ -1220,6 +1221,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1306054870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306054867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a36bfb6aad49944f9a44414031eff51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadDelay: 2
+  sceneName: BallAimScene
+  runOnAwake: 0
 --- !u!1001 &1385463378
 PrefabInstance:
   m_ObjectHideFlags: 0

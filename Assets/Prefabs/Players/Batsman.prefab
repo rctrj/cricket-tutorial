@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f47fb2b10748e492c9892909e2b9e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAllowedHitDistance: 20
+  maxAllowedHitDistance: 10
   animator: {fileID: 1182146273419783793}
   batTransform: {fileID: 7206705614947771743}
   allowedAnglesToHit: {x: 0, y: 90}
